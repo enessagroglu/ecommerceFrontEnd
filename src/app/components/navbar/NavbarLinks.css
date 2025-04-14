@@ -1,0 +1,46 @@
+.navbar-links {
+    background: linear-gradient(to right, #faa893, #ff8263);
+    padding: 0.5rem 1rem;
+    box-shadow: 0 6px 16px rgba(252, 123, 2, 0.682);
+    width: 50%;
+    color: aliceblue;
+    border-radius: 0 0 15px 15px;
+  }
+  
+  .menu {
+    list-style: none;
+    display: flex;
+    gap: 2rem; /* Menü elemanları arası boşluk */
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .menu-item {
+    position: relative; /* Hover alt çizgisi için gerekli */
+    cursor: pointer;
+    transition: color 0.2s ease;
+  }
+  
+  .menu-text {
+    margin-left: 3px;
+  }
+  
+  /* Hover durumunda soldan sağa animasyon ile alt çizgi çıkar */
+  .menu-item::after {
+    content: "";
+    position: absolute;
+    bottom: -3px; /* Yazının hemen altı; gerekirse ayarlanabilir */
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease-out;
+    
+  }
+  
+  .menu-item:hover::after {
+    width: 100%;
+  }
+  
