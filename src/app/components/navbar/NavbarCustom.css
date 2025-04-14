@@ -1,0 +1,92 @@
+/* NavbarCustom.css */
+
+.rootKatman {
+    position: relative; /* İçerisindeki absolute elemanlar için */
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    height: 6rem;
+    padding: 0 1rem;
+    background: linear-gradient(to right, #f3967f, #ff8263); 
+    color: white;
+    overflow: hidden; /* Arka plan resminin taşmasını engellemek için */
+    box-shadow: 0 6px 16px rgba(252, 123, 2, 0.682);
+}
+.bgImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;           /* Resim navbarın yarısını kaplasın */
+    height: 100%;
+    background: url('../../../../public/sarmasik-desen.png') no-repeat left center;
+    background-size: cover;
+    /* Soldan sağa doğru yumuşak fade-out efekti */
+    -webkit-mask-image: linear-gradient(to right, black 0%, transparent 100%);
+    mask-image: linear-gradient(to right, black 0%, transparent 100%);
+    z-index: 0; /* İçeriklerin arkasında */
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 100%;
+}
+
+.logo {
+    width: 300px;
+    height: auto; /* Oranları bozmamak için yüksekliği otomatik bırakıyoruz */
+    position: absolute;  /* Diğer içeriklerden bağımsız konumlandırma */
+    left: 50%;           /* Sol kenardan %50 uzaklık */
+    transform: translateX(-50%); /* Kendi genişliğinin %50'si kadar sola kaydırarak merkezi elde ediyoruz */
+    z-index: 1;
+}
+
+/* Menü stil ayarları */
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 2rem; /* Menü elemanları arasına boşluk koyar */
+    margin: 0;
+    padding: 0;
+    margin-right: 3%;
+    align-items: center;
+}
+
+.menu li {
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+/* Hover durumunda renk açılması için örnek bir efekt */
+.menu li:hover {
+    color: #eee;
+}
+
+.rootKatman::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;         /* Resmin navbarın yarısını kaplaması için */
+    height: 100%;
+    background: url('../../../../public/sarmasik-desen.png') no-repeat left center;
+    background-size: cover;
+    /* Soldan sağa doğru görüntüde fade (yumuşak kaybolma) efekti */
+    -webkit-mask-image: linear-gradient(to right, black 0%, transparent 100%);
+    mask-image: linear-gradient(to right, black 0%, transparent 100%);
+    pointer-events: none;  /* Alt elemanlarla etkileşimi engellemesin */
+    
+  }
+
+  .menu-item{
+    display: flex;
+    align-items: center;
+    
+  }
+  
+  .menu-text{
+    margin-left: 3px;
+  }
