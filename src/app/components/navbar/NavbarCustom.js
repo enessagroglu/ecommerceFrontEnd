@@ -1,8 +1,7 @@
 import "./NavbarCustom.css";
 import Image from "next/image";
 import Logo from "../../../../public/logo.png";
-import AslanLogo from "../../../../public/aslan-logo.png"
-import { HomeOutlined } from '@ant-design/icons';
+import { HomeOutlined, ShoppingOutlined, ClockCircleOutlined, MessageOutlined, LoginOutlined} from '@ant-design/icons';
 
 export default function NavbarCustom() {
   return (
@@ -17,10 +16,10 @@ export default function NavbarCustom() {
         
           <ul className="menu">
             <li className="menu-item"> <HomeOutlined />  <p className="menu-text">Anasayfa</p></li>
-            <li>Ürünler</li>
-            <li>Kampanyalar</li>
-            <li>Destek</li>
-            <li>Giriş Yap</li>
+            <li className="menu-item"> <ShoppingOutlined />  <p className="menu-text"> Ürünler</p></li>
+            <li className="menu-item"> <ClockCircleOutlined /> <p className="menu-text"> Kampanyalar</p></li>
+            <li className="menu-item"> <MessageOutlined /> <p className="menu-text">Destek</p> </li>
+            <li className="menu-item"> <LoginOutlined /> <p className="menu-text">Giriş Yap</p> </li>
           </ul>
         
       </div>
