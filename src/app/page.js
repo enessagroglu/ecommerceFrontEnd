@@ -1,7 +1,8 @@
 import "./page.css";
 import { Col, Row } from "antd";
+import Home from "./components/home/Home.js"
 
-export default function Home() {
+export default function Page() {
   return (
     <div className="root-page">
       <Row>
@@ -30,7 +31,7 @@ export default function Home() {
           md={{ order: 1 }}
           lg={{ order: 2 }}
         >
-          4 col-order-responsive
+          <Home />
         </Col>
       </Row>
     </div>
