@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
-export default function Card({ link, imageSrc, title }) {
+export default function CardSmall({ link, imageSrc, title }) {
   return (
     <Link href={link}>
       <div className="card">
