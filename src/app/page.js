@@ -1,11 +1,12 @@
 import "./page.css";
 import { Col, Row } from "antd";
-import Home from "./components/home/Home.js"
+import Home from "./components/home/Home.js";
 
 export default function Page() {
   return (
     <div className="root-page">
-      <Row>
+      <Home />
+      {/* <Row>
         <Col
           className=""
           span={2}
@@ -31,9 +32,8 @@ export default function Page() {
           md={{ order: 1 }}
           lg={{ order: 2 }}
         >
-          <Home />
-        </Col>
-      </Row>
+          </Col>
+          </Row>  */}
     </div>
   );
 }

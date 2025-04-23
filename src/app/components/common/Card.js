@@ -20,7 +20,7 @@ export default function Card({ link, imageSrc, title }) {
             display: block;
             text-decoration: none;
             color: #fe8358;
-            width: 400px;
+            width: 350px;
             
             
           }

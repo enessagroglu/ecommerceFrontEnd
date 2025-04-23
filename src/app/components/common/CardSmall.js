@@ -1,26 +1,25 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
-export default function CardSmall({ link, imageSrc, title }) {
+export default function CardSmall({ link, imageSrc }) {
   return (
     <Link href={link}>
       <div className="card">
         <div className="card-image">
           <Image 
             src={imageSrc} 
-            alt={title} 
+            alt=""
             layout="fill" 
             objectFit="cover"
             className="image"
           />
         </div>
-        <h3 className="card-title">{title}</h3>
         <style jsx>{`
           .card {
             display: block;
             text-decoration: none;
             color: #fe8358;
-            width: 400px;
+            width: 250px;
             
             
           }
