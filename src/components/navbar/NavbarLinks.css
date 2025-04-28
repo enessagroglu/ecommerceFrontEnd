@@ -25,6 +25,8 @@
   
   .menu-text {
     margin-left: 3px;
+    font-family: monospace;
+    text-decoration: none;
   }
   
   /* Hover durumunda soldan sağa animasyon ile alt çizgi çıkar */
@@ -44,3 +46,7 @@
     width: 100%;
   }
   
+  a{
+    text-decoration: none;
+    color: inherit;
+  }

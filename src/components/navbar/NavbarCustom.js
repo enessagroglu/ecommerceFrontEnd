@@ -1,6 +1,6 @@
 import "./NavbarCustom.css";
 import Image from "next/image";
-import Logo from "../../../../public/ARS-Logo.png";
+import Logo from "../../../public/ARS-Logo.png";
 
 export default function NavbarCustom() {
   return (

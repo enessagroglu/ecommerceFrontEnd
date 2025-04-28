@@ -6,7 +6,8 @@ export default function NavbarLinks() {
     <nav className="navbar-links">
       <ul className="menu">
         <li className="menu-item">
-          <HomeOutlined /> <span className="menu-text">Anasayfa</span>
+          <a className="" href="/home"><HomeOutlined /> <span className="menu-text">Anasayfa</span></a>
+          
         </li>
         <li className="menu-item">
           <ShoppingOutlined /> <span className="menu-text">Ürünler</span>

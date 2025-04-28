@@ -4,8 +4,9 @@ import React from 'react'
 
 import "./globals.css"
 
-import NavbarCustom from './components/navbar/NavbarCustom'
-import NavbarLinks from './components/navbar/NavbarLinks'
+import NavbarCustom from '../components/navbar/NavbarCustom'
+import NavbarLinks from '../components/navbar/NavbarLinks'
+import Footer from "../components/footer/Footer"
 
 export default function RootLayout({ children }) {
   return (
@@ -18,7 +19,7 @@ export default function RootLayout({ children }) {
         <div className='center'><NavbarLinks /></div>
         
           {children}
-        
+        <Footer/>
       </body>
     </html>
   )
