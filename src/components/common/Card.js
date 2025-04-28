@@ -43,6 +43,7 @@ export default function Card({ link, imageSrc, title }) {
             margin-top: 10px;
             font-size: medium;
             text-align: center;
+            font-size: 1rem;
           }
         `}</style>
       </div>
