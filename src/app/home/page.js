@@ -22,6 +22,7 @@ import { Divider } from "antd";
 import Card from "../../components/common/Card";
 import CardSmall from "../../components/common/CardSmall.js";
 
+
 const bigCards = [
   { link: "/#", imageSrc: NikeImage, title: "NIKE Ayakkabılar" },
   { link: "/#", imageSrc: PumaImage, title: "PUMA Ayakkabılar" },
