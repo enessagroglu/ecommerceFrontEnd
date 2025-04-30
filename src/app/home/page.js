@@ -21,12 +21,12 @@ import "./Home.css";
 import { Divider } from "antd";
 import Card from "../../components/common/Card";
 import CardSmall from "../../components/common/CardSmall.js";
-
+import CustomCarousel from "@/components/carousel/CustomCarousel";
 
 const bigCards = [
   { link: "/#", imageSrc: NikeImage, title: "NIKE Ayakkabılar" },
   { link: "/#", imageSrc: PumaImage, title: "PUMA Ayakkabılar" },
-  { link: "/#", imageSrc: AdidasImage, title: "ADIDAS Ayakkabılar" }
+  { link: "/#", imageSrc: AdidasImage, title: "ADIDAS Ayakkabılar" },
 ];
 
 const smallCards = [
@@ -39,21 +39,21 @@ const smallCards = [
   { link: "/#", imageSrc: Sapka },
   { link: "/#", imageSrc: Bere },
   { link: "/#", imageSrc: SirtCanta },
-  { link: "/#", imageSrc: Terlik }
+  { link: "/#", imageSrc: Terlik },
 ];
 
 const containerVariants = {
   hidden: {},
   visible: {
     transition: {
-      staggerChildren: 0.2
-    }
-  }
+      staggerChildren: 0.2,
+    },
+  },
 };
 
 const itemVariants = {
   hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0 }
+  visible: { opacity: 1, y: 0 },
 };
 
 export default function Home() {
@@ -65,13 +65,7 @@ export default function Home() {
       whileInView="visible"
       viewport={{ once: true, amount: 0.1 }}
     >
-      {/* Home resmi scroll ile görünce animasyon */}
-      <motion.div
-        className="center"
-        variants={itemVariants}
-      >
-        <Image className="home-image" src={HomeImage} alt="home" />
-      </motion.div>
+      <CustomCarousel  />
 
       <br />
       <Divider style={{ borderColor: "#f78b71" }} />
@@ -80,7 +74,11 @@ export default function Home() {
       <motion.div className="card-container">
         {bigCards.map((card, i) => (
           <motion.div key={i} variants={itemVariants}>
-            <Card link={card.link} imageSrc={card.imageSrc} title={card.title} />
+            <Card
+              link={card.link}
+              imageSrc={card.imageSrc}
+              title={card.title}
+            />
           </motion.div>
         ))}
       </motion.div>

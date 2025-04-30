@@ -4,7 +4,7 @@ import Home from "../app/home/page"
 
 export default function Page() {
   return (
-    <div className="root-page">
+    <div className="">
       
       <Home />
     </div>
