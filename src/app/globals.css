@@ -1,15 +1,28 @@
-.global-katman {
-  background-color: rgb(249, 230, 217);
+html,
+body {
+  height: 100%;
   margin: 0;
   padding: 0;
+  font-family: monospace;
 }
-body {
-    margin: 0;
-    padding: 0;
-    font-family: monospace;
-  }
 
-.center{
+.global-katman {
+  background-color: rgb(249, 230, 217);
+}
+
+/* Flex column layout için */
+.layout-body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: rgb(249, 230, 217); /* isteğe bağlı, global-katman'dan alınabilir */
+}
+
+.flex-grow {
+  flex: 1;
+}
+
+.center {
   display: flex;
   justify-content: center;
   align-items: center;

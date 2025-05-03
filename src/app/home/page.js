@@ -1,45 +1,30 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
-import HomeImage from "../../../public/home.png";
-import NikeImage from "../../../public/nike.png";
-import PumaImage from "../../../public/puma.png";
-import AdidasImage from "../../../public/adidas.png";
-import Sneakers from "../../../public/sneakers.png";
-import Yuruyus from "../../../public/yurus-ayakkabi.png";
-import Sweat from "../../../public/sweatshirt.png";
-import Tshirt from "../../../public/tshirt.png";
-import Mont from "../../../public/mont.png";
-import Outdoor from "../../../public/out-ayakkabi.png";
-import Sapka from "../../../public/sapka.png";
-import Bere from "../../../public/bere.png";
-import SirtCanta from "../../../public/sirt-cantasi.png";
-import Terlik from "../../../public/terlik.png";
-
-import "./Home.css";
 import { Divider } from "antd";
 import Card from "../../components/common/Card";
 import CardSmall from "../../components/common/CardSmall.js";
 import CustomCarousel from "@/components/carousel/CustomCarousel";
+import { brandImages, productImages } from "@/assets/images";
+import "./Home.css";
 
 const bigCards = [
-  { link: "/#", imageSrc: NikeImage, title: "NIKE Ayakkabılar" },
-  { link: "/#", imageSrc: PumaImage, title: "PUMA Ayakkabılar" },
-  { link: "/#", imageSrc: AdidasImage, title: "ADIDAS Ayakkabılar" },
+  { link: "/#", imageSrc: brandImages.nike, title: "NIKE Ayakkabılar" },
+  { link: "/#", imageSrc: brandImages.puma, title: "PUMA Ayakkabılar" },
+  { link: "/#", imageSrc: brandImages.adidas, title: "ADIDAS Ayakkabılar" },
 ];
 
 const smallCards = [
-  { link: "/#", imageSrc: Sneakers },
-  { link: "/#", imageSrc: Yuruyus },
-  { link: "/#", imageSrc: Sweat },
-  { link: "/#", imageSrc: Tshirt },
-  { link: "/#", imageSrc: Mont },
-  { link: "/#", imageSrc: Outdoor },
-  { link: "/#", imageSrc: Sapka },
-  { link: "/#", imageSrc: Bere },
-  { link: "/#", imageSrc: SirtCanta },
-  { link: "/#", imageSrc: Terlik },
+  { link: "/#", imageSrc: productImages.sneakers },
+  { link: "/#", imageSrc: productImages.yuruyus },
+  { link: "/#", imageSrc: productImages.sweat },
+  { link: "/#", imageSrc: productImages.tshirt },
+  { link: "/#", imageSrc: productImages.mont },
+  { link: "/#", imageSrc: productImages.outdoor },
+  { link: "/#", imageSrc: productImages.sapka },
+  { link: "/#", imageSrc: productImages.bere },
+  { link: "/#", imageSrc: productImages.sirtCanta },
+  { link: "/#", imageSrc: productImages.terlik },
 ];
 
 const containerVariants = {

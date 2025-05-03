@@ -1,26 +1,26 @@
 // app/layout.js
 
-import React from 'react'
+import React from "react";
 
-import "./globals.css"
+import "./globals.css";
 
-import NavbarCustom from '../components/navbar/NavbarCustom'
-import NavbarLinks from '../components/navbar/NavbarLinks'
-import Footer from "../components/footer/Footer"
+import NavbarCustom from "../components/navbar/NavbarCustom";
+import NavbarLinks from "../components/navbar/NavbarLinks";
+import Footer from "../components/footer/Footer";
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="global-katman">
-      
-      
+    <html lang="en">
       <body>
-        
-        <NavbarCustom />
-        <div className='center'><NavbarLinks /></div>
-        
-          {children}
-        <Footer/>
+        <div className="layout-body">
+          <NavbarCustom />
+          <NavbarLinks />
+
+          <main className="flex-grow">{children}</main>
+
+          <Footer />
+        </div>
       </body>
     </html>
-  )
+  );
 }

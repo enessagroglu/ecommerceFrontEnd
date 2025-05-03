@@ -1,5 +1,4 @@
 import { Carousel } from "antd";
-import "./CustomCarousel.css";
 
 const slides = [
     { src: "/alisveris.png",  title: "Yeni Sezon, Yeni Sen!" },
@@ -24,25 +23,50 @@ const titleStyle = {
     textShadow: "5px 5px 10px rgba(0,0,0,0.8)",
   };
 
-export default function CustomCarousel() {
-  return (
-    <>
-      <Carousel autoplay>
-        {slides.map((slide, idx) => (
-          <div key={idx}>
-            <div
-              style={{
-                ...baseStyle,
-                backgroundImage: `url("${slide.src}")`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-              }}
-            >
-              <h3 style={titleStyle}>{slide.title}</h3>
+  export default function CustomCarousel() {
+    return (
+      <>
+        <Carousel autoplay>
+          {slides.map((slide, idx) => (
+            <div key={idx}>
+              <div
+                style={{
+                  ...baseStyle,
+                  backgroundImage: `url("${slide.src}")`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  position: "relative", // önemli: overlay ve yazı üst üste yerleşecek
+                  overflow: "hidden",   // taşma olmasın
+                }}
+              >
+                {/* Overlay */}
+                <div
+                  style={{
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    width: "100%",
+                    height: "100%",
+                    backgroundColor: "rgba(0, 0, 0, 0.5)", // karartma seviyesi
+                    zIndex: 1,
+                  }}
+                />
+  
+                {/* Yazı */}
+                <h3
+                  style={{
+                    ...titleStyle,
+                    zIndex: 2,
+                    position: "relative", // overlay’in üstünde görünsün
+                  }}
+                >
+                  {slide.title}
+                </h3>
+              </div>
             </div>
-          </div>
-        ))}
-      </Carousel>
-    </>
-  );
-}
+          ))}
+        </Carousel>
+      </>
+    );
+  }
+  
