@@ -12,8 +12,8 @@ import "./ShoppingCard.css"
 export default function ShoppingCard({ Name, Price, ImgUrl, AvatarUrl }) {
   return (
     <Card
-      style={{ width: "100%" }}
-      cover={<img className="productImg" alt={Name} src={ImgUrl.src} />} // ✅ buraya dikkat
+      className="shopping-card"
+      cover={<img className="productImg" alt={Name} src={ImgUrl.src} />} 
       actions={[
         <EyeOutlined key="view" />,
         <ShoppingCartOutlined key="cart" />,
@@ -21,7 +21,7 @@ export default function ShoppingCard({ Name, Price, ImgUrl, AvatarUrl }) {
       ]}
     >
       <Meta
-        avatar={<Avatar src={AvatarUrl.src} />} // ✅ buraya da dikkat
+        avatar={<Avatar src={AvatarUrl.src} />} 
         title={Name}
         description={`₺${Price}`}
       />

@@ -33,12 +33,7 @@ const products = [
   export default function ProductsPage() {
     return (
       <div
-        style={{
-          padding: "4rem",
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
-          gap: "1rem",
-        }}
+        className="products-grid"
       >
         {products.map((product, index) => (
           <ShoppingCard

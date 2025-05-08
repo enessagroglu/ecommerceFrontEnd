@@ -1,0 +1,20 @@
+.products-grid {
+    display: grid;
+    /* minimum card width 240px, stretch to fill extra space */
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 7px;              /* space between cards */
+    padding: 16px;          /* optional page padding */
+  }
+  
+  /* if your ShoppingCard itself needs to fill its grid cell */
+  .products-grid > * {
+    width: 100%;
+  }
+
+  @media (max-width: 400px) {
+    .products-grid {
+      /* 2 eşit sütun */
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  

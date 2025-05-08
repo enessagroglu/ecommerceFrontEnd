@@ -1,6 +1,35 @@
+/* ShoppingCard.css */
 
-
-.productImg{
-    height: 20%;
-    width: 50px;
-}
+/* 1) Kartın default genişliği */
+.shopping-card {
+    width: 240px;
+  }
+  
+  /* 2) İç resmin default davranışı */
+  .productImg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  /* 3) Mobilde (örneğin 600px altı) ayarlamalar */
+  @media (max-width: 600px) {
+    .shopping-card {
+      width: 160px;       /* kart genişliğini küçült */
+      margin: 0 auto;     /* istersen ortala */
+    }
+    .shopping-card .productImg {
+      width: 100%;         /* resmin genişliğini %80’e indir */
+      height: auto;       /* orantıyı koru */
+    }
+    .shopping-card .ant-card-body {
+      padding: 8px;       /* iç boşlukları da biraz küçült */
+    }
+    .shopping-card .ant-card-meta-title {
+      font-size: 14px;    /* başlık fontunu küçült */
+    }
+    .shopping-card .ant-card-meta-description {
+      font-size: 12px;    /* fiyat yazısını küçült */
+    }
+  }
+  
