@@ -1,49 +1,33 @@
-import "./products.css"
+import "./products.css";
+import Link from "next/link";
 import ShoppingCard from "../../components/ShoppingCard/ShoppingCard";
-import { brandImages, productImages, BrandAvatar } from "@/assets/images";
+import { categories } from "../products/data/mockCategories";
+import { products } from "../products/data/mockProducts";
 
-const products = [
-    {
-      Name: "Ürün 1",
-      Price: "100",
-      ImgUrl: productImages.bere,
-      AvatarUrl: BrandAvatar.nike,
-    },
-    {
-      Name: "Ürün 2",
-      Price: "150",
-      ImgUrl: productImages.mont,
-      AvatarUrl: BrandAvatar.nike,
-    },
-    {
-      Name: "Ürün 3",
-      Price: "200",
-      ImgUrl: productImages.sapka,
-      AvatarUrl: BrandAvatar.nike,
-    },
-    {
-      Name: "Ürün 4",
-      Price: "250",
-      ImgUrl: productImages.sneakers,
-      AvatarUrl: BrandAvatar.nike,
-    },
-    // ... diğer ürünler
-  ];
-  
-  export default function ProductsPage() {
-    return (
-      <div
-        className="products-grid"
-      >
+export default function ProductsPage() {
+  return (
+    <div className="">
+      <h1 className="">Tüm Ürünler</h1>
+      <ul className="mb-6 flex gap-4 list-none p-0">
+        {categories.map(c => (
+          <li key={c.categoryId}>
+            <Link href={`/products/${c.categoryId}`} className="underline">
+              {c.categoryName}
+            </Link>
+          </li>
+        ))}
+      </ul>
+      <div className="products-grid">
         {products.map((product, index) => (
           <ShoppingCard
             key={index}
-            Name={product.Name}
-            Price={product.Price}
-            ImgUrl={product.ImgUrl}
-            AvatarUrl={product.AvatarUrl}
+            Name={product.name}
+            Price={product.price}
+            ImgUrl={product.imgUrl}
+            AvatarUrl={product.avatarUrl}
           />
         ))}
       </div>
-    );
-  }
+    </div>
+  );
+}

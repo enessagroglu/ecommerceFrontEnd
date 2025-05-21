@@ -1,0 +1,20 @@
+export const categories = [
+  {categoryId : "1", categoryName : "Erkek Giyim"},
+  {categoryId : "11", categoryName : "Ayakkabı"},
+  {categoryId : "12", categoryName : "Tshirt"},
+  {categoryId : "13", categoryName : "Sweatshirt"},
+  {categoryId : "14", categoryName : "Mont"},
+  {categoryId : "2", categoryName : "Kadın Giyim"},
+  {categoryId : "21", categoryName : "Ayakkabı"},
+  {categoryId : "22", categoryName : "Tshirt"},
+  {categoryId : "23", categoryName : "Sweatshirt"},
+  {categoryId : "24", categoryName : "Mont"},
+  {categoryId : "3", categoryName : "Çocuk Giyim"},
+  {categoryId : "4", categoryName : "Unisex"},
+  {categoryId : "40", categoryName : "Üst Giyim"},
+  {categoryId : "41", categoryName : "Şapka"},
+  {categoryId : "42", categoryName : "Bere"},
+  {categoryId : "43", categoryName : "Sırt Çantası"},
+  {categoryId : "44", categoryName : "Terlik"},
+  
+]
