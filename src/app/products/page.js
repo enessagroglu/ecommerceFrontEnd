@@ -6,17 +6,23 @@ import { products } from "../products/data/mockProducts";
 
 export default function ProductsPage() {
   return (
-    <div className="">
-      <h1 className="">Tüm Ürünler</h1>
-      <ul className="mb-6 flex gap-4 list-none p-0">
-        {categories.map(c => (
-          <li key={c.categoryId}>
-            <Link href={`/products/${c.categoryId}`} className="underline">
-              {c.categoryName}
-            </Link>
-          </li>
-        ))}
-      </ul>
+    <>
+      {/* ====== 1) KATEGORİLER ====== */}
+      <div className="container">
+        <h1 className="page-title">Tüm Ürünler</h1>
+        <ul className="category-grid">
+          {categories.map((c) => (
+            <li key={c.categoryId} className="category-item">
+              <Link href={`/products/${c.categoryId}`} className="category-link">
+                {c.categoryName}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {/* ====== 2) ÜRÜNLER ======
+           (bunu container dışında bırakıyoruz ki kendi .products-grid padding’i çalışsın) */}
       <div className="products-grid">
         {products.map((product, index) => (
           <ShoppingCard
@@ -28,6 +34,6 @@ export default function ProductsPage() {
           />
         ))}
       </div>
-    </div>
+    </>
   );
 }

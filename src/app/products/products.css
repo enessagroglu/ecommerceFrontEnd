@@ -1,20 +1,115 @@
-.products-grid {
-    display: grid;
-    /* minimum card width 240px, stretch to fill extra space */
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    gap: 7px;              /* space between cards */
-    padding: 16px;          /* optional page padding */
-  }
-  
-  /* if your ShoppingCard itself needs to fill its grid cell */
-  .products-grid > * {
-    width: 100%;
-  }
+/* ------------------------------------------------------------
+   A) Container ve Başlık
+------------------------------------------------------------ */
+.container {
+  padding: 0 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-  @media (max-width: 400px) {
-    .products-grid {
-      /* 2 eşit sütun */
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
+.page-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+/* ------------------------------------------------------------
+   B) Kategori ızgarası (4 → 3 → 2 → 1 sütun)
+------------------------------------------------------------ */
+.category-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(4, 1fr);
+  margin-bottom: 32px;
+  list-style: none;
+  padding: 0;
+}
+
+
+.category-link {
+  display: block;
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #ff8163;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #333;
+  transition: background-color 0.2s ease-in-out;
+}
+.category-link:hover {
+  background-color: #ff8163;
+  color:white
+}
+
+.categoryTop {
+  display: block;
+  margin-left: 1%;
   
+}
+
+.custom-btn {
+  /* Arka plan rengini istediğiniz hex değeriyle ayarlayın */
+  background-color: #ffffff !important;
+
+  /* Yazı rengini beyaz yaptık; isterseniz farklı bir renk de kullanabilirsiniz */
+  color: #b83c1d !important;
+
+  /* Düğmenin etrafındaki border rengini de aynı tutalım */
+  border-color: #ff8163 !important;
+
+  /* Yazı tipini monospace olarak ayarlıyoruz */
+  font-family: "Courier New", Courier, monospace !important;
+}
+
+/* Hover veya focus gibi durumlarda da renklerin bozulmaması için: */
+.custom-btn:hover,
+.custom-btn:focus {
+  background-color: #ff8163 !important;
+  color: #ffffff !important;
+  border-color: #ff8163 !important;
+}
+
+.categoryBaslik {
+  color: #b94326
+}
+
+@media (max-width: 1024px) {
+  .category-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .category-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ------------------------------------------------------------
+   C) Ürün ızgarası  — “Eski Hali” (senin ilk attığın CSS)
+------------------------------------------------------------ */
+.products-grid {
+  display: grid;
+  /* minimum card width 240px, stretch to fill extra space */
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 7px;              
+  padding: 16px;         /* burası eskiden böyleydi */
+}
+
+/* eğer ShoppingCard öğesi hücreyi dolduracaksa */
+.products-grid > * {
+  width: 100%;
+}
+
+@media (max-width: 400px) {
+  .products-grid {
+    /* 2 eşit sütun */
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
