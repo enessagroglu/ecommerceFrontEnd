@@ -13,7 +13,11 @@ export default function ProductsPage() {
         <ul className="category-grid">
           {categories.map((c) => (
             <li key={c.categoryId} className="category-item">
-              <Link href={`/products/${c.categoryId}`} className="category-link">
+              <Link
+                key={c.categoryId}
+                href={`/categories/${c.categoryId}`}
+                className="category-link"
+              >
                 {c.categoryName}
               </Link>
             </li>
@@ -25,13 +29,18 @@ export default function ProductsPage() {
            (bunu container dışında bırakıyoruz ki kendi .products-grid padding’i çalışsın) */}
       <div className="products-grid">
         {products.map((product, index) => (
-          <ShoppingCard
-            key={index}
-            Name={product.name}
-            Price={product.price}
-            ImgUrl={product.imgUrl}
-            AvatarUrl={product.avatarUrl}
-          />
+          <Link
+            key={product.id}
+            href={`/products/${product.id}`} 
+            className="product-link"
+          >
+            <ShoppingCard
+              Name={product.name}
+              Price={product.price}
+              ImgUrl={product.imgUrl}
+              AvatarUrl={product.avatarUrl}
+            />
+          </Link>
         ))}
       </div>
     </>

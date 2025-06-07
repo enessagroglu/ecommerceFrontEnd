@@ -4,10 +4,11 @@
 import { useRouter } from "next/navigation";
 import { Button } from "antd";
 import ShoppingCard from "../../../components/ShoppingCard/ShoppingCard";
-import { categories } from "../data/mockCategories";
-import { products } from "../data/mockProducts";
+import { categories } from "../../products/data/mockCategories";
+import { products } from "../../products/data/mockProducts";
 import { filterByCategory } from "../utils/filterByCategory";
-import "../products.css";
+import Link from "next/link";
+import "../../products/products.css";
 
 export default function CategoryClient({ params }) {
   const router = useRouter();
@@ -39,7 +40,7 @@ export default function CategoryClient({ params }) {
       <div className="categoryTop">
         <h1 className="categoryBaslik">{category?.categoryName}</h1>
 
-        {/* AntD butonuna event handler ekliyoruz */}
+        
         <Button className="custom-btn" onClick={goToAllProducts}>
           Tüm Kategoriler
         </Button>
@@ -47,13 +48,18 @@ export default function CategoryClient({ params }) {
 
       <div className="products-grid">
         {filtered.map((product, index) => (
-          <ShoppingCard
-            key={index}
-            Name={product.name}
-            Price={product.price}
-            ImgUrl={product.imgUrl}
-            AvatarUrl={product.avatarUrl}
-          />
+          <Link
+            key={product.id}
+            href={`/products/${product.id}`} 
+            className="product-link"
+          >
+            <ShoppingCard
+              Name={product.name}
+              Price={product.price}
+              ImgUrl={product.imgUrl}
+              AvatarUrl={product.avatarUrl}
+            />
+          </Link>
         ))}
       </div>
     </div>

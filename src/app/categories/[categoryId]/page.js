@@ -1,7 +1,7 @@
 // app/products/[categoryId]/page.jsx
 
 import CategoryClient from "./CategoryClient";
-import { categories } from "../data/mockCategories";
+import { categories } from "../../products/data/mockCategories";
 
 export async function generateStaticParams() {
   return categories.map((c) => ({ categoryId: c.categoryId }));

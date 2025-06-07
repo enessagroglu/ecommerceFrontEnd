@@ -2,7 +2,7 @@ import { brandImages, productImages, BrandAvatar } from "@/assets/images";
 
 export const products = [
   {
-    id: "1",
+    id: "p1",
     categoryId: "42",
     name: "Ürün 1",
     price: "100",
@@ -10,7 +10,7 @@ export const products = [
     avatarUrl: BrandAvatar.nike,
   },
   {
-    id: "2",
+    id: "p2",
     categoryId: "14",
     name: "Ürün 2",
     price: "150",
@@ -18,7 +18,7 @@ export const products = [
     avatarUrl: BrandAvatar.nike,
   },
   {
-    id: "3",
+    id: "p3",
     categoryId: "41",
     name: "Ürün 3",
     price: "200",
@@ -26,7 +26,7 @@ export const products = [
     avatarUrl: BrandAvatar.nike,
   },
   {
-    id: "4",
+    id: "p4",
     categoryId: "21",
     name: "Ürün 4",
     price: "250",

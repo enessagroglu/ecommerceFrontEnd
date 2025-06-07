@@ -14,11 +14,7 @@ export default function ShoppingCard({ Name, Price, ImgUrl, AvatarUrl }) {
     <Card
       className="shopping-card"
       cover={<img className="productImg" alt={Name} src={ImgUrl.src} />} 
-      actions={[
-        <EyeOutlined key="view" />,
-        <ShoppingCartOutlined key="cart" />,
-        <ShoppingOutlined key="order" />,
-      ]}
+      
     >
       <Meta
         avatar={<Avatar src={AvatarUrl.src} />} 

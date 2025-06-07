@@ -7,6 +7,8 @@ import "./globals.css";
 import NavbarCustom from "../components/navbar/NavbarCustom";
 import NavbarLinks from "../components/navbar/NavbarLinks";
 import Footer from "../components/footer/Footer";
+import '@ant-design/v5-patch-for-react-19';
+
 
 export default function RootLayout({ children }) {
   return (
