@@ -33,7 +33,6 @@
   border: 1px solid #ff8163;
   border-radius: 6px;
   text-decoration: none;
-  color: #333;
   transition: background-color 0.2s ease-in-out;
 }
 .category-link:hover {
@@ -120,7 +119,7 @@
 .product-detail-container {
   padding: 2rem;
   display: flex;
-  flex-direction: column;
+  
   align-items: center;
 }
 
@@ -159,5 +158,25 @@
   padding: 2rem;
   text-align: center;
   font-size: 1.5rem;
-  color: red;
+  color: rgb(0, 0, 0);
+}
+.category-item{
+  color: #b94326
+}
+
+.carousel-container{
+  width: 50%;
+}
+
+.detail-container{
+  width: 50%;
+}
+
+.info-container{
+  display: flex;
+  align-items: center;
+}
+
+.margin-top-2{
+  margin-top: 2%
 }

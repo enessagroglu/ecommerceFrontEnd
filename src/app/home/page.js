@@ -17,14 +17,14 @@ const bigCards = [
 const smallCards = [
   { link: "/#", imageSrc: productImages.sneakers },
   { link: "/#", imageSrc: productImages.yuruyus },
-  { link: "/#", imageSrc: productImages.sweat },
-  { link: "/#", imageSrc: productImages.tshirt },
-  { link: "/#", imageSrc: productImages.mont },
+  { link: "/categories/7", imageSrc: productImages.sweat },
+  { link: "/categories/6", imageSrc: productImages.tshirt },
+  { link: "/categories/8", imageSrc: productImages.mont },
   { link: "/#", imageSrc: productImages.outdoor },
-  { link: "/#", imageSrc: productImages.sapka },
-  { link: "/#", imageSrc: productImages.bere },
-  { link: "/#", imageSrc: productImages.sirtCanta },
-  { link: "/#", imageSrc: productImages.terlik },
+  { link: "/categories/10", imageSrc: productImages.sapka },
+  { link: "/categories/11", imageSrc: productImages.bere },
+  { link: "/categories/12", imageSrc: productImages.sirtCanta },
+  { link: "/categories/13", imageSrc: productImages.terlik },
 ];
 
 const containerVariants = {

@@ -1,9 +1,4 @@
 import React from "react";
-import {
-  EyeOutlined,
-  ShoppingCartOutlined,
-  ShoppingOutlined,
-} from "@ant-design/icons";
 import { Card, Avatar } from "antd";
 import Meta from "antd/es/card/Meta";
 import "./ShoppingCard.css"

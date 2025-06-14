@@ -53,7 +53,8 @@
   
   .logo {
     width: 180px;
-    height: auto; /* Oranların korunması için */
+    height: 90px;
+    object-fit: contain;
   }
 
 .rootKatman::after {
