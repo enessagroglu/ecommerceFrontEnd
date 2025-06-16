@@ -130,11 +130,30 @@
   text-align: center;
 }
 
-/* Ürün resmi */
-.product-image {
-  
-  max-width: 400px;
-  border-radius: 8px;
+.carousel-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px; /* Carousel yüksekliği */
+  background-color: transparent; /* burada değil, wrapper'da olacak */
+}
+
+
+.carousel-image {
+  object-fit: contain;
+  max-width: 100%;
+  height: auto;
+}
+.product-carousel {
+  background-color: transparent; /* burada arka plan gerekirse ayarlanabilir */
+}
+
+.product-carousel .slick-slide {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  height: 400px; /* örnek yüksekliği sen belirleyebilirsin */
+  background-color: inherit;
 }
 
 /* Marka avatarı */
@@ -165,18 +184,32 @@
 }
 
 .carousel-container{
+  flex: 1;
   width: 50%;
+  background-color: rgb(226, 199, 171);
+  border-radius: 12px;
 }
 
 .detail-container{
+  flex: 1;
+  padding: 1rem;
+  border-radius: 12px; /* köşeleri yuvarlatır */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 50%;
+  background-color: rgb(255, 245, 234);
+  height: auto;
 }
 
 .info-container{
   display: flex;
-  align-items: center;
+  gap: 2rem;
+  align-items: stretch;
 }
 
 .margin-top-2{
-  margin-top: 2%
+  margin-top: 2%;
+  margin-right:1%;
+  margin-left: 1%;
 }
