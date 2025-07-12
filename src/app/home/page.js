@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Divider } from "antd";
 import Card from "../../components/common/Card";
 import CardSmall from "../../components/common/CardSmall.js";
-import CustomCarousel from "@/components/carousel/CustomCarousel";
+import ExpoSlider from "@/components/expoSlider/ExpoSlider";
 import { brandImages, productImages } from "@/assets/images";
 import "./Home.css";
 
@@ -50,7 +50,8 @@ export default function Home() {
       whileInView="visible"
       viewport={{ once: true, amount: 0.1 }}
     >
-      <CustomCarousel  />
+      
+      <ExpoSlider />
 
       <br />
       <Divider style={{ borderColor: "#f78b71" }} />

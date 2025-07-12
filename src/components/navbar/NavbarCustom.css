@@ -1,98 +1,56 @@
 .navbar-root {
-    position: relative; /* İçerisindeki absolute elemanlar için */
-    display: flex;
-    align-items: center;
-    height: 6rem;
-    justify-content: space-between; 
-    background: linear-gradient(to right, #ff8263, #ff8263);
-    color: white;
-    overflow: visible;
-    box-shadow: 0 6px 16px rgba(252, 123, 2, 0.69);
-    
-  }
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 6rem;
+  justify-content: center;
+  background-color: #0d1b2a; /* lacivert ton */
+  background-image: url('../../../public/moda-desen-genis.png'); /* yeni desenin yolu */
   
-  /* Arka plan resmi katmanı */
-  .bgImage {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50%; /* Resim navbarın yarısını kaplayacak */
-    height: 100%;
-    background: url('../../../public/sarmasik-desen.png') no-repeat left center;
-    background-size: cover;
-    -webkit-mask-image: linear-gradient(to right, black 0%, transparent 100%);
-    mask-image: linear-gradient(to right, black 0%, transparent 100%);
-    z-index: 0;
-  }
+  background-repeat: no-repeat;
+  background-size: cover; /* Tek görseli tam alan kaplayacak şekilde büyütür */
+  background-position: center; /* Ortalanmış görünüm */
+  color: white;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
 
-  .bgImage-reverse {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 50%;           /* Navbarın yarısını kaplar */
-    height: 100%;
-    background: url('../../../public/sarmasik-desen.png') no-repeat right center;
-    background-size: cover;
-    /* Maske yönü sağdan sola: soldan başlayıp sağa doğru yumuşak geçiş */
-    -webkit-mask-image: linear-gradient(to left, black 0%, transparent 100%);
-    mask-image: linear-gradient(to left, black 0%, transparent 100%);
-    z-index: 0;
-  }
-  
-  .navbar-content {
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    display: flex;
-    justify-content: center; /* LOGO ORTADA */
-    align-items: center;
-    padding: 0 1rem;
-  }
-  
-  
-  
-  .logo {
-    width: 180px;
-    height: 90px;
-    object-fit: contain;
-  }
+.navbar-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center; /* LOGO ortalanmış */
+  align-items: center;
+  padding: 0 1rem;
+}
 
-.rootKatman::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50%;         /* Resmin navbarın yarısını kaplaması için */
-    height: 100%;
-    background: url('../../../public/sarmasik-desen.png') no-repeat left center;
-    background-size: cover;
-    /* Soldan sağa doğru görüntüde fade (yumuşak kaybolma) efekti */
-    -webkit-mask-image: linear-gradient(to right, black 0%, transparent 100%);
-    mask-image: linear-gradient(to right, black 0%, transparent 100%);
-    pointer-events: none;  /* Alt elemanlarla etkileşimi engellemesin */
-    
-    
-  }
+.logo {
+  margin-top: 1%;
+  width: 280px;
+  height: 120px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.528));
+}
 
+/* Menü butonu (mobil) */
+.menu-button {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  z-index: 2;
+  padding: 0.5rem;
+  display: block;
+}
+
+@media (min-width: 769px) {
   .menu-button {
-    position: absolute;
-    right: 1rem;
-    top: 50%;
-    transform: translateY(-50%); /* Dikey ortalama */
-    background: none;
-    border: none;
-    font-size: 2rem;
-    color: white;
-    cursor: pointer;
-    z-index: 10;
-    padding: 0.5rem;
-    display: block;
+    display: none;
   }
-  
-  /* Sadece mobilde göster */
-  @media (min-width: 769px) {
-    .menu-button {
-      display: none;
-    }
-  }
-  
+}

@@ -2,7 +2,7 @@
 
 import "./NavbarCustom.css";
 import Image from "next/image";
-import Logo from "../../../public/ARS-Logo.png";
+import Logo from "../../../public/logo-guncel.png";
 import { MenuOutlined } from "@ant-design/icons";
 import { Drawer } from "antd";
 import { useState } from "react";
@@ -16,18 +16,13 @@ export default function NavbarCustom() {
 
   return (
     <div className="navbar-root">
-      <div className="bgImage"></div>
-      <div className="bgImage-reverse"></div>
-
       <div className="navbar-content">
         <Image className="logo" src={Logo} alt="logo" />
-
         <button className="menu-button" onClick={showDrawer}>
           <MenuOutlined />
         </button>
       </div>
 
-      {/* Drawer Menüsü */}
       <Drawer
         title="Menü"
         placement="left"

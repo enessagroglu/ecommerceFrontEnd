@@ -1,0 +1,43 @@
+.expo-slider-wrapper {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+.swiper {
+  width: 100%;
+  aspect-ratio: 16 / 6;
+}
+
+@media (max-width: 768px) {
+  .swiper {
+    aspect-ratio: 9 / 12;
+  }
+}
+
+
+/* Slide'ların düzgün görünmesi için */
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Expo içeriği görünür ve responsive */
+.expo-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: var(--expo-image-border-radius, 16px);
+}
+
+/* Görselin kaplaması */
+.expo-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

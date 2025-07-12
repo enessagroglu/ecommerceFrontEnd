@@ -4,9 +4,9 @@
   position: sticky;
   top: 0;
   transition: all 0.3s ease;
-  background: linear-gradient(to right, #ff8263, #ff8263);
+  background: #06273a;
   padding: 0.5rem 1rem;
-  box-shadow: 0 6px 16px rgba(252, 123, 2, 0.682);
+  box-shadow: 0 6px 16px rgba(3, 17, 84, 0.682);
   width: 50%;
   color: aliceblue;
   border-radius: 0 0 15px 15px;
@@ -65,11 +65,11 @@
   /* Scroll sonrası renk değişimi */
 .sticky-scrolled {
   background: white;
-  color: #ff8263;
-  border-bottom: 2px solid #ff8263;
+  color: #06273a;
+  border-bottom: 2px solid #06273a;
 }
 
 /* Sticky durumunda hover çizgisi rengi */
 .sticky-scrolled .menu-item::after {
-  background-color: #ff8263;
+  background-color: #06273a;
 }
