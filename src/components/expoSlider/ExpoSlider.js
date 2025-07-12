@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { useEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -12,14 +12,12 @@ import "./effect-expo.css";
 import "./expo-slider.css";
 
 const slides = [
-  "/slide1.png",
-  "/slide2.png",
-  "/slide3.png",
-  "/nike.png",
-  "/puma.png",
-  "/sneakers.png",
+  { src: "/slide1.png", text: "Çok Tercih Edilen Markalar" },
+  { src: "/slide2.png", text: "Her Tarza Uygun Ürünler" },
+  { src: "/slide3.png", text: "" },
+  { src: "/slide4.png", text: "Geniş Ürün Yelpazesi" },
+  { src: "/slide5.png", text: "Tarzını Keşfet" },
 ];
-
 
 export default function ExpoSlider() {
   const swiperRef = useRef(null);
@@ -70,9 +68,10 @@ export default function ExpoSlider() {
             <div className="expo-container">
               <img
                 className="expo-image"
-                src={slide}
+                src={slide.src}
                 alt={`slide-${index}`}
               />
+              <div className="overlay-text">{slide.text}</div>
             </div>
           </SwiperSlide>
         ))}
