@@ -3,10 +3,10 @@
   background-color: #ffffff !important;
 
   /* Yazı rengini beyaz yaptık; isterseniz farklı bir renk de kullanabilirsiniz */
-  color: #b83c1d !important;
+  color: #0084d1 !important;
 
   /* Düğmenin etrafındaki border rengini de aynı tutalım */
-  border-color: #ff8163 !important;
+  border-color: #0069a8 !important;
 
   /* Yazı tipini monospace olarak ayarlıyoruz */
   font-family: "Courier New", Courier, monospace !important;
@@ -15,7 +15,7 @@
 /* Hover veya focus gibi durumlarda da renklerin bozulmaması için: */
 .back-button:hover,
 .back-button:focus {
-  background-color: #ff8163 !important;
+  background-color: #0069a8 !important;
   color: #ffffff !important;
-  border-color: #ff8163 !important;
+  border-color: #0069a8 !important;
 }

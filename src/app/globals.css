@@ -7,7 +7,7 @@ body {
 }
 
 .global-katman {
-  background-color: rgb(249, 230, 217);
+  background-color: var(--backgroundroot);
 }
 
 /* Flex column layout için */
@@ -15,7 +15,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: rgb(249, 230, 217); /* isteğe bağlı, global-katman'dan alınabilir */
+  background-color: var(--backgroundroot); /* isteğe bağlı, global-katman'dan alınabilir */
 }
 
 .flex-grow {
@@ -29,5 +29,13 @@ body {
 }
 
 h1{
-  color: #b94326
+  color: var(--h1color);
+}
+
+.divider-color{
+  border-color: var(--dividercolor);
+}
+
+p{
+  color: var(--pcolor);
 }

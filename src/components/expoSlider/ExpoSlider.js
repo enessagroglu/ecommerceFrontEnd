@@ -12,9 +12,9 @@ import "./effect-expo.css";
 import "./expo-slider.css";
 
 const slides = [
-  "/adidas.png",
-  "/alisveris.png",
-  "/home.png",
+  "/slide1.png",
+  "/slide2.png",
+  "/slide3.png",
   "/nike.png",
   "/puma.png",
   "/sneakers.png",

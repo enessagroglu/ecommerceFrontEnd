@@ -7,6 +7,7 @@ import CardSmall from "../../components/common/CardSmall.js";
 import ExpoSlider from "@/components/expoSlider/ExpoSlider";
 import { brandImages, productImages } from "@/assets/images";
 import "./Home.css";
+import "../globals.css"
 
 const bigCards = [
   { link: "/#", imageSrc: brandImages.nike, title: "NIKE Ayakkabılar" },
@@ -54,7 +55,7 @@ export default function Home() {
       <ExpoSlider />
 
       <br />
-      <Divider style={{ borderColor: "#f78b71" }} />
+      <Divider className="divider-color" />
       <br />
 
       <motion.div className="card-container">
@@ -69,7 +70,7 @@ export default function Home() {
         ))}
       </motion.div>
       <br />
-      <Divider style={{ borderColor: "#f78b71" }} />
+      <Divider className="divider-color" />
       <br />
 
       <motion.div className="card-container">

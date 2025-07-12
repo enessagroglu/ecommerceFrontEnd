@@ -19,7 +19,7 @@ export default function Card({ link, imageSrc, title }) {
           .card {
             display: block;
             text-decoration: none;
-            color: #fe8358;
+            color: #0084d1;
             width: 350px;
             
             

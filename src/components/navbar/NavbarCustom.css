@@ -6,7 +6,6 @@
   justify-content: center;
   background-color: #0d1b2a; /* lacivert ton */
   background-image: url('../../../public/moda-desen-genis.png'); /* yeni desenin yolu */
-  
   background-repeat: no-repeat;
   background-size: cover; /* Tek görseli tam alan kaplayacak şekilde büyütür */
   background-position: center; /* Ortalanmış görünüm */

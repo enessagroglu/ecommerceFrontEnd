@@ -11,6 +11,7 @@
   font-size: 2rem;
   font-weight: 600;
   margin-bottom: 24px;
+  color: #0069a8
 }
 
 /* ------------------------------------------------------------
@@ -30,13 +31,13 @@
   display: block;
   padding: 12px;
   text-align: center;
-  border: 1px solid #ff8163;
+  border: 1px solid #0069a8;
   border-radius: 6px;
   text-decoration: none;
   transition: background-color 0.2s ease-in-out;
 }
 .category-link:hover {
-  background-color: #ff8163;
+  background-color: #0069a8;
   color:white
 }
 
@@ -51,10 +52,10 @@
   background-color: #ffffff !important;
 
   /* Yazı rengini beyaz yaptık; isterseniz farklı bir renk de kullanabilirsiniz */
-  color: #b83c1d !important;
+  color: #0069a8  !important;
 
   /* Düğmenin etrafındaki border rengini de aynı tutalım */
-  border-color: #ff8163 !important;
+  border-color: #0069a8 !important;
 
   /* Yazı tipini monospace olarak ayarlıyoruz */
   font-family: "Courier New", Courier, monospace !important;
@@ -63,13 +64,13 @@
 /* Hover veya focus gibi durumlarda da renklerin bozulmaması için: */
 .custom-btn:hover,
 .custom-btn:focus {
-  background-color: #ff8163 !important;
+  background-color: #0069a8 !important;
   color: #ffffff !important;
-  border-color: #ff8163 !important;
+  border-color: #0069a8 !important;
 }
 
 .categoryBaslik {
-  color: #b94326
+  color: #0069a8
 }
 
 @media (max-width: 1024px) {
@@ -128,6 +129,7 @@
   margin-bottom: 1rem;
   font-size: 2rem;
   text-align: center;
+  color: #0069a8;
 }
 
 .carousel-slide {
@@ -180,13 +182,13 @@
   color: rgb(0, 0, 0);
 }
 .category-item{
-  color: #b94326
+  color: #00598a
 }
 
 .carousel-container{
   flex: 1;
   width: 50%;
-  background-color: rgb(226, 199, 171);
+  background-color:#dff2fe;
   border-radius: 12px;
 }
 
@@ -198,7 +200,7 @@
   flex-direction: column;
   justify-content: space-between;
   width: 50%;
-  background-color: rgb(255, 245, 234);
+  background-color: #f0f9ff;
   height: auto;
 }
 
