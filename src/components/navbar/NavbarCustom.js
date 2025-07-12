@@ -2,7 +2,7 @@
 
 import "./NavbarCustom.css";
 import Image from "next/image";
-import Logo from "../../../public/logo-guncel.png";
+import Logo from "../../../public/guncel-logo.png";
 import { MenuOutlined } from "@ant-design/icons";
 import { Drawer } from "antd";
 import { useState } from "react";
