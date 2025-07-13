@@ -9,8 +9,10 @@ export default function Card({ link, imageSrc, title }) {
           <Image 
             src={imageSrc} 
             alt={title} 
-            layout="fill" 
-            objectFit="cover"
+            fill
+            sizes="(max-width: 768px) 100vw, 250px"
+
+            style={{ objectFit: "cover" }} 
             className="image"
           />
         </div>

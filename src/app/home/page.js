@@ -16,12 +16,10 @@ const bigCards = [
 ];
 
 const smallCards = [
-  { link: "/#", imageSrc: productImages.sneakers, title: "Sneaker Modelleri" },
-  { link: "/#", imageSrc: productImages.yuruyus, title: "Yürüyüş Ayakkabıları" },
+  { link: "/categories/5", imageSrc: productImages.sneakers, title: "Ayakkabı Çeşitleri" },
   { link: "/categories/7", imageSrc: productImages.sweat, title: "Sweatshirt Modelleri" },
   { link: "/categories/6", imageSrc: productImages.tshirt, title: "Tişörtler" },
   { link: "/categories/8", imageSrc: productImages.mont, title: "Montlar" },
-  { link: "/#", imageSrc: productImages.outdoor, title: "Outdoor Ayakkabıları" },
   { link: "/categories/10", imageSrc: productImages.sapka, title: "Şapkalar" },
   { link: "/categories/11", imageSrc: productImages.bere, title: "Bereler" },
   { link: "/categories/12", imageSrc: productImages.sirtCanta, title: "Sırt Çantaları" },

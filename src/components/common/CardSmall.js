@@ -9,8 +9,9 @@ export default function CardSmall({ link, imageSrc, title }) {
           <Image 
             src={imageSrc} 
             alt=""
-            layout="fill" 
-            objectFit="contain"
+            fill
+            sizes="(max-width: 768px) 100vw, 250px"
+            style={{ objectFit: "contain" }} 
             className="image"
           />
         </div>
