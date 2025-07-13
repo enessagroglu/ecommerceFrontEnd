@@ -16,16 +16,16 @@ const bigCards = [
 ];
 
 const smallCards = [
-  { link: "/#", imageSrc: productImages.sneakers },
-  { link: "/#", imageSrc: productImages.yuruyus },
-  { link: "/categories/7", imageSrc: productImages.sweat },
-  { link: "/categories/6", imageSrc: productImages.tshirt },
-  { link: "/categories/8", imageSrc: productImages.mont },
-  { link: "/#", imageSrc: productImages.outdoor },
-  { link: "/categories/10", imageSrc: productImages.sapka },
-  { link: "/categories/11", imageSrc: productImages.bere },
-  { link: "/categories/12", imageSrc: productImages.sirtCanta },
-  { link: "/categories/13", imageSrc: productImages.terlik },
+  { link: "/#", imageSrc: productImages.sneakers, title: "Sneaker Modelleri" },
+  { link: "/#", imageSrc: productImages.yuruyus, title: "Yürüyüş Ayakkabıları" },
+  { link: "/categories/7", imageSrc: productImages.sweat, title: "Sweatshirt Modelleri" },
+  { link: "/categories/6", imageSrc: productImages.tshirt, title: "Tişörtler" },
+  { link: "/categories/8", imageSrc: productImages.mont, title: "Montlar" },
+  { link: "/#", imageSrc: productImages.outdoor, title: "Outdoor Ayakkabıları" },
+  { link: "/categories/10", imageSrc: productImages.sapka, title: "Şapkalar" },
+  { link: "/categories/11", imageSrc: productImages.bere, title: "Bereler" },
+  { link: "/categories/12", imageSrc: productImages.sirtCanta, title: "Sırt Çantaları" },
+  { link: "/categories/13", imageSrc: productImages.terlik, title: "Terlik Modelleri" },
 ];
 
 const containerVariants = {
@@ -76,7 +76,7 @@ export default function Home() {
       <motion.div className="card-container">
         {smallCards.map((card, i) => (
           <motion.div key={i} variants={itemVariants}>
-            <CardSmall link={card.link} imageSrc={card.imageSrc} />
+            <CardSmall link={card.link} imageSrc={card.imageSrc} title={card.title} />
           </motion.div>
         ))}
       </motion.div>

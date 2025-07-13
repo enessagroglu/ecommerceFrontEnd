@@ -1,10 +1,10 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
-export default function CardSmall({ link, imageSrc }) {
+export default function CardSmall({ link, imageSrc, title }) {
   return (
-    <Link href={link}>
-      <div className="card">
+    <Link href={link} passHref legacyBehavior>
+      <a className="card">
         <div className="card-image">
           <Image 
             src={imageSrc} 
@@ -14,24 +14,25 @@ export default function CardSmall({ link, imageSrc }) {
             className="image"
           />
         </div>
-        
+        <div className="card-title">{title}</div>
+
         <style jsx>{`
           .card {
             display: block;
             text-decoration: none;
-            color: #fe8358;
+            color: inherit;
             width: 250px;
-            margin: 0 auto; /* Merkezi hizalama */
+            margin: 0 auto;
           }
 
           .card-image {
             position: relative;
             width: 100%;
-            height: 250px; /* Fotoğraf alanının yüksekliğini artırdık */
+            height: 250px;
             overflow: hidden;
             border-radius: 30px;
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-            margin-bottom: 20px; /* Başlık ile fotoğraf arasına mesafe ekledik */
+            margin-bottom: 10px;
           }
 
           .card-image :global(img) {
@@ -43,12 +44,13 @@ export default function CardSmall({ link, imageSrc }) {
           }
 
           .card-title {
-            margin-top: 10px;
-            font-size: medium;
             text-align: center;
+            font-family: monospace;
+            font-size: 15px;
+            color: #0084d1;
           }
         `}</style>
-      </div>
+      </a>
     </Link>
   );
 }
